@@ -1,0 +1,48 @@
+https://flutter.dev/docs/get-started/install/windows
+
+A. INSTALLATION
+
+1. Windows Terminal 5.0
+    - open cmd, type: powershell
+    - type: $PSVersionTable
+    - make sure PSversion is > 5.0
+        Name                           Value
+        ----                           -----
+        PSVersion                      5.1.18362.145
+        PSEdition                      Desktop
+        PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
+        BuildVersion                   10.0.18362.145
+        CLRVersion                     4.0.30319.42000
+        WSManStackVersion              3.0
+        PSRemotingProtocolVersion      2.3
+        SerializationVersion           1.1.0.1
+
+2. Install git v.2.x
+    - download from https://git-scm.com/
+
+3. Download Flutter SDK
+    - https://flutter.dev/docs/get-started/install/windows
+    - Extract the zip file and place the contained flutter in the desired installation location for the Flutter SDK (for example, C:\src\flutter; 
+    - do not install Flutter in a directory like C:\Program Files\ that requires elevated privileges).
+    - Locate the file flutter_console.bat inside the flutter directory. Start it by double-clicking.
+
+4. Go to Edit environment variables, under User Variables:
+    - on Path, add: C:\src\flutter\bin
+    - open cmd, go to C:\src\flutter & type: flutter doctor
+
+5. open vs code, install Flutter extension by Dart Code.
+    - open View - Command Pallette - Flutter: Run Flutter Doctor
+
+// ==========================================================
+
+B. START A NEW PROJECT (on VS CODE)
+
+1. CTRL+SHIFT+P or View -> Command Pallette -> Flutter: New Project
+    add project name & wait till this done!
+    the main file is on: lib/main.dart
+
+2. Run the project:
+    - Open Android emulator (AVD)
+    - Select device on bottom part of VS code
+    - to run from terminal: $ flutter run
+    - Enjoy
