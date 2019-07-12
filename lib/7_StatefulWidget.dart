@@ -1,19 +1,21 @@
-//  2:04:21
+// StatefullWidget & create state function
+// Widget that can handle: add/delete/updateing state/data
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
+  // adding create state function
   @override
   State<StatefulWidget> createState() {
     return _MyAppState();
   }
 }
 
+// class "_MyAppState" just convention for state that 
+// only be used in same file, cannot be imported to other file 
 class _MyAppState extends State<MyApp>{
-  // adding 'products' properties: will be a LIST of STRING
-  List<String> _products = ['Captain America', 'Testing'];
-
   @override
   Widget build(BuildContext context){
     return MaterialApp(
@@ -31,15 +33,13 @@ class _MyAppState extends State<MyApp>{
               child: Text('Add Image'),
             ),
           ),
-          Column(children:
-            // get every element in product then return it as Card
-            _products.map((element) => Card(
-              child: Column(children: <Widget>[   
-                Image.asset('assets/lintang.png'),
-                Text(element)
-              ],),
-            ),).toList()
-          ) 
+          Card(
+            child: Column(children: <Widget>[   
+              Image.asset('assets/lintang.png'),
+              Text('Hello World!')
+            ],),
+            // <Widget>[] means: GENERIC TYPE, the array [] just contains Widget!
+          ),
         ],) 
       ),
     );
